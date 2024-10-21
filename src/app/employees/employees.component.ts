@@ -1,6 +1,6 @@
-import {Component, inject} from '@angular/core';
+import { Component } from '@angular/core';
 import { Employee } from '../model/employee';
-import {EmployeeService} from "../service/employee.service";
+import { EmployeeService } from '../service/employee.service';
 import { Observable } from 'rxjs';
 import { RouterLink } from '@angular/router';
 import { NgFor, AsyncPipe } from '@angular/common';
@@ -13,7 +13,6 @@ import { NgFor, AsyncPipe } from '@angular/common';
     imports: [RouterLink, NgFor, AsyncPipe]
 })
 export class EmployeesComponent {
-  protected employees: EmployeeService = inject(EmployeeService);
   // Observable to hold the employee data
   employees$: Observable<Employee[]>;
 
